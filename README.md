@@ -31,3 +31,12 @@ yalc add tree_shaker_dependency_1
 yalc add tree_shaker_dependency_2
 ```
 
+Now run 
+```
+npm run build
+
+or to see more debug on the webpack build
+
+npm run build:dev
+```
+

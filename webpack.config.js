@@ -48,17 +48,18 @@ const config = {
     // new BundleAnalyzerPlugin(),
     new webpack.IgnorePlugin({
       checkResource(resource, context) {
-          const isLocaleFromMomentImport =
-                  /^\.\/locale$/.test(resource) && /moment$/.test(context);
-          const isReactTooltipIndexFile = /^\.\/index\.es\.js$/.test(resource) && /react-tooltip\/dist$/.test(context);
+          // const isLocaleFromMomentImport =
+          //         /^\.\/locale$/.test(resource) && /moment$/.test(context);
+          // const isReactTooltipIndexFile = /^\.\/index\.es\.js$/.test(resource) && /react-tooltip\/dist$/.test(context);
  
-          const isBuffer = /^buffer$/.test(resource)
-          console.log(resource)
-          console.log(isBuffer)
-          console.log(context)
-          console.log("----")
+          // const isBuffer = /^buffer$/.test(resource)
+          // console.log(resource)
+          // console.log(isBuffer)
+          // console.log(context)
+          // console.log("----")
+          // Do some test here on the name of the module you want to exclude 
           return (
-            isBuffer
+            false
           );
       },
   }),
@@ -75,7 +76,8 @@ module.exports = () => {
       innerGraph: true,
       sideEffects: true,
     };
-    config.devtool = false
+    config.devtool = false;
+    config.plugins.push(new BundleAnalyzerPlugin());
   }
   return config;
 };
