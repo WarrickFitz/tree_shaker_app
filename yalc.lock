@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "packages": {
+    "tree_shaker_dependency_1": {
+      "signature": "4c18d1cf3271ca1212e826d630a555f1",
+      "file": true,
+      "replaced": "*"
+    },
+    "tree_shaker_dependency_2": {
+      "signature": "791b0126a1a2ee3e6729229f7f22d9b8",
+      "file": true,
+      "replaced": "*"
+    }
+  }
+}
